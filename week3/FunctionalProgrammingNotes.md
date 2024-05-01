@@ -4,7 +4,7 @@
 
 * Be able to explain the basic difference between the two predominant programming paradigms: functional programming and object-oriented programming
 
-* Understand, at a very high level, how the functional programming paradigm works*
+* Understand, at a very high level, how the functional programming paradigm works
 
 "There are actually several styles of coding, also known as paradigms. A common style is called functional programming, or FP for short.
 
@@ -175,3 +175,38 @@ For example:
 addTwoNums(specificNum, specificNum); // returned number is 84
 addTwoNums(specificNum, randomNum); // returned number is 42 + some random number
 ```
+
+### Pure functions and side-effects
+Another concept of functional programming are pure functions.
+
+A pure function returns the exact same result as long as it's given the same values.
+
+An example of a pure function is the **addTwoNums()** function from the previous section:
+
+```javascript
+function addTwoNums(a, b) {
+    console.log(a + b)
+}
+```
+
+This function will always return the same output, based on the input. For example, as long as we give it a specific value, say, a 5, and a 6:  
+
+```javascript
+addTwoNums(5,6); // 11
+```
+
+... the output will always be the same.
+
+Another rule for a function to be considered pure is that it should not have side-effects. A side-effect is any instance where a function makes a change outside of itself.
+
+This includes: 
+
+changing variable values outside of the function itself, or even relying on outside variables 
+
+calling a Browser API (even the console itself!) 
+
+calling **Math.random()** - since the value cannot be reliably repeated
+
+The topic of pure and impure functions can get somewhat complex.
+
+For now, it's sufficient to know that this concept exists and that it is related to functional programming.
